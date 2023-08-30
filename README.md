@@ -140,3 +140,21 @@ If you plan to run GloFE on other datasets, here are the instructions on how to:
 - filter out the anchor words and generate the files needed for the model
 
 \*Details are now WIP, refer to the notebooks in the `notebooks` folder for now.
+
+## Citing GloFE
+If you find this work useful, please consider giving it a star ⭐ and citing our paper in your work:
+```
+@inproceedings{lin-etal-2023-gloss,
+    title = "Gloss-Free End-to-End Sign Language Translation",
+    author = "Lin, Kezhou  and Wang, Xiaohan  and Zhu, Linchao  and Sun, Ke  and Zhang, Bang  and Yang, Yi",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.722",
+    doi = "10.18653/v1/2023.acl-long.722",
+    pages = "12904--12916",
+}
+
+```
