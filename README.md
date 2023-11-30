@@ -60,6 +60,15 @@ Install MMPose and set the `MMPOSE_ROOT`(path to MMPose's git dir) in `tools/ext
                         │ └─── # Number of sub-splits (for parallel extraction)
                         └───── # Split id for this process
 ```
+If you encountered version mismatch, try the following ones (thanks to @sandeep-sm in [issue #4](https://github.com/HenryLittle/GloFE/issues/4)):
+```bash
+MMPose - v0.29.0
+mmcv==1.6.2
+mmdet==2.25.2
+mmtrack>=0.6.0
+xtcocotools==1.12
+```
+
 ## Training and Inference
 
 ### Environment Setup
@@ -83,6 +92,7 @@ conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit
 pip install -r requirements.txt
 
 ``` -->
+
 For inference or training, use the scripts provided in `scripts/{dataset_name}/`. All python commands or scripts should be excuted under the `GloFE` home folder.
 ### Inference
 Specifies the following argument to match your local environment before running the script (use OpenASL as an example):
