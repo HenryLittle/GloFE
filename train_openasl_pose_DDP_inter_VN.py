@@ -136,9 +136,14 @@ class OpenASLPoseDataset(Dataset):
             pose_output = np.concatenate(
                 (pose_cated, np.zeros((diff, V, C))), axis=0)
         elif T > self.visual_token_num:
-            diff = T - self.visual_token_num
-            offset = np.random.randint(0, diff)
-            pose_output = pose_cated[offset: offset +
+            if self.phase == 'train':
+                diff = T - self.visual_token_num
+                offset = np.random.randint(0, diff)
+                pose_output = pose_cated[offset: offset +
+                                     self.visual_token_num, :, :]
+            elif self.phase == 'test':
+                offset = 0
+                pose_output = pose_cated[offset: offset +
                                      self.visual_token_num, :, :]
         else:
             pose_output = pose_cated
